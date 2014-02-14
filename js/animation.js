@@ -33,6 +33,33 @@ function init() {
 		ease:Back.easeInOut, yoyo:true,  repeat:-1, repeatDelay:.5, delay:1.5});
 }
 
+/**************************************************
+
+					Animation for Experiences
+
+**************************************************/
+//javascript
+
+//GSAP 1.8.0
+
+$(".thumb a").each(function(index, element){
+  var tl = new TimelineLite({paused:true});
+  tl.to(element, 0.2, {opacity:1, ease:Power2.easeInOut})
+  tl.to($(element).find(".background"), 0.4, {backgroundColor:"#b4c23d", y:-105, ease:Power1.easeOut})
+  tl.to($(element).find(".headline"), 0.1, {y:-30, ease:Power1.easeIn}, '-=0.4')
+  tl.to($(element).find(".location"), 0.1, {y:-150, ease:Power1.easeOut}, '-=0.1')
+  element.animation = tl;
+})
+//toggle play and reverse of each .feature element's timeline on hover 
+$(".thumb a").hover(over, out);
+
+function over(){
+  this.animation.play();
+}
+
+function out(){
+  this.animation.reverse();
+}
 
 /**************************************************
 
