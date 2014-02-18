@@ -50,7 +50,7 @@ $(".thumb a").each(function(index, element){
   tl.to($(element).find(".location"), 0.1, {y:-150, ease:Power1.easeOut}, '-=0.1')
   element.animation = tl;
 })
-//toggle play and reverse of each .feature element's timeline on hover 
+//toggle play and reverse of each .feature element's timeline on hover
 $(".thumb a").hover(over, out);
 
 function over(){
