@@ -52,7 +52,7 @@ $(document).ready(function() {
 	controller.addTween('a.scroll', TweenMax.from($('.header'), .7, {opacity:0, top:-200, ease:Power4.easeInOut}));
 
 	//Slide down arrow fades out when user scrolls down
-	controller.addTween('a.scroll', TweenMax.to($('a.scroll'), .7, {opacity:0, ease:Power4.easeInOut}));
+	controller.addTween('a.scroll', TweenMax.to($('a.scroll'), .7, {autoAlpha:0, ease:Power4.easeInOut}));
 });
 
 // parallax example
@@ -75,32 +75,44 @@ $(document).ready(function() {
 			Animation for Experiences - RollOver
 
 **************************************************/
+// main animation function
+function experiencesAnim(){
 
-$(".thumb a").each(function(index, element){
-	var tl = new TimelineLite({paused:true});
-		bgHeight = $(element).find(".text-box").height()+25;
+	$(".thumb a").each(function(index, element){
+		var tl = new TimelineLite({paused:true}),
+			bgHeight = $(element).find(".text-box").height()+25;
 
-	tl.to($(element).find(".background"), 0.3, {backgroundColor:"#b4c23d", height:bgHeight, ease:Power2.easeInOut});
-	tl.to($(element).find(".headline"), 0.3, {y:-30, ease:Power1.easeInOut}, '-=0.2');
-	tl.to($(element).find(".location"), 0.3, {y:-40, ease:Power1.easeInOut}, '-=0.2');
-	element.animation = tl;
-})
+	  tl.to($(element).find(".background"), 0.3, {backgroundColor:"#b4c23d", height:bgHeight, ease:Power2.easeInOut})
+	  tl.to($(element).find(".headline"), 0.3, {y:-30, ease:Power1.easeInOut}, '-=0.2')
+	  tl.to($(element).find(".location"), 0.3, {y:-40, ease:Power1.easeInOut}, '-=0.2')
+	  // Code for simblings works but it has a bug when you rollover multiple thumbs really quickly.
+	  //tl.to($(element).parent().siblings(), 0.3, {opacity:.2, ease:Power1.easeOut}, '-=0.3')
 
-var siblings:TweenMax = TweenMax.to($(this).parent().siblings(), 0.5, {opacity:.2, paused:true});
+	  element.animation = tl;
+
+	//var siblings = new TweenMax($(element).parent().siblings(), 0.5, {opacity:.2, paused:true});
+	});
+
+}
+
+// run animation first time
+experiencesAnim();
 
 //toggle play and reverse of each .feature element's timeline on hover
 $(".thumb a").hover(over, out);
 
 function over(){
-	this.animation.play();
-	siblings.play();
+  this.animation.play();
 }
 
 function out(){
-	this.animation.reverse();
-	siblings.reverse();
+  this.animation.reverse();
 }
 
+// resize event handler
+window.onresize = function(){
+	experiencesAnim();
+};
 
 /**************************************************
 
