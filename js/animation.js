@@ -35,6 +35,7 @@ function init() {
 
 /**************************************************
 
+<<<<<<< HEAD
 					Animation for Experiences
 
 **************************************************/
@@ -51,16 +52,76 @@ $(".thumb a").each(function(index, element){
   element.animation = tl;
 })
 //toggle play and reverse of each .feature element's timeline on hover 
+=======
+				Super Scrollorama / Parallax
+
+**************************************************/
+//Update all elements when window is resized
+$(window).resize(function () {
+	controller.triggerCheckAnim();
+});
+
+$(document).ready(function() {
+	var controller = $.superscrollorama();
+	// individual element tween examples
+	//controller.addTween(250,
+	//	TweenMax.from($('#experiences'), 1, {opacity:0, ease:Power2.easeInOut}), false);
+
+	//header slides down when user scrolls down
+	controller.addTween('a.scroll', TweenMax.from($('.header'), .7, {opacity:0, top:-200, ease:Power4.easeInOut}));
+
+	//Slide down arrow fades out when user scrolls down
+	controller.addTween('a.scroll', TweenMax.to($('a.scroll'), .7, {opacity:0, ease:Power4.easeInOut}));
+});
+
+// parallax example
+/*	controller.addTween(
+	  '#examples-parallax',
+	  (new TimelineLite())
+	    .append([
+	      TweenMax.fromTo($('#parallax-it-left'), 1,
+	        {css:{top: 200}, immediateRender:true},
+	        {css:{top: -600}}),
+	      TweenMax.fromTo($('#parallax-it-right'), 1,
+	        {css:{top: 500}, immediateRender:true},
+	        {css:{top: -1250}})
+	    ]),
+	  1000 // scroll duration of tween
+	);*/
+
+/**************************************************
+
+			Animation for Experiences - RollOver
+
+**************************************************/
+
+$(".thumb a").each(function(index, element){
+	var tl = new TimelineLite({paused:true});
+		bgHeight = $(element).find(".text-box").height()+25;
+
+	tl.to($(element).find(".background"), 0.3, {backgroundColor:"#b4c23d", height:bgHeight, ease:Power2.easeInOut});
+	tl.to($(element).find(".headline"), 0.3, {y:-30, ease:Power1.easeInOut}, '-=0.2');
+	tl.to($(element).find(".location"), 0.3, {y:-40, ease:Power1.easeInOut}, '-=0.2');
+	element.animation = tl;
+})
+
+var siblings:TweenMax = TweenMax.to($(this).parent().siblings(), 0.5, {opacity:.2, paused:true});
+
+//toggle play and reverse of each .feature element's timeline on hover
+>>>>>>> parent of 5c3262c... added on.resize refresh animation
 $(".thumb a").hover(over, out);
 
 function over(){
-  this.animation.play();
+	this.animation.play();
+	siblings.play();
 }
 
 function out(){
-  this.animation.reverse();
+	this.animation.reverse();
+	siblings.reverse();
 }
 
+<<<<<<< HEAD
 /**************************************************
 
 					Parallax
@@ -71,6 +132,8 @@ $(document).ready(function() {
 	// individual element tween examples
 	controller.addTween('#test', TweenMax.from( $('#test'), .5, {css:{opacity: 0}}));
 });
+=======
+>>>>>>> parent of 5c3262c... added on.resize refresh animation
 
 /**************************************************
 
