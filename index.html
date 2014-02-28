@@ -1,140 +1,110 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Big Adventures - Great Western Plains</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap -->
-  <!-- Latest compiled and minified CSS
-  <link rel="stylesheet" href="css/bootstrap.min.css">-->
+  <head>
+    <title>Test 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS
+    <link rel="stylesheet" href="css/bootstrap.min.css">-->
 
-  <!-- Optional theme
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+    <!-- Optional theme
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
 
-  <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/custom.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  <![endif]-->
 
-</head>
-<body onload="init()">
-<!-- start blurred BG -->
-<div id="blurred-image-container">
-    <div class="img-src"></div>
-    <div class="img-src blurred-image"></div>
-</div>
-<!-- end blurred BG -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-<!-- start COVER -->
-<div class="cover">
-  <div>
-    <h1 id="logo"><img src="img/logo.png" alt="Great Western Plains"/></h1>
+  </head>
+  <body onload="init()">
 
-    <h2><div class="first">Experience a</div> <div class="second">Great Big Adventure</div></h2>
-
-    <a href="#" class="scroll"><div id="arrow"></div>scroll down</a>
+  <!-- start blurred BG -->
+  <div id="blurred-image-container">
+      <div class="img-src"></div>
+      <div class="img-src blurred-image"></div>
   </div>
-</div>
-<!-- end COVER -->
+  <!-- end blurred BG -->
 
-<!-- start HEADER -->
-<div class="header">
-  <div>
-    <h1 id="logo"><img src="img/logo.png" alt="Great Western Plains"/></h1>
-  </div>
-</div>
-<!-- end HEADER -->
+    <div class="header">
+      <div>
+        <h1 id="logo"><img src="img/logo.png" alt="Great Western Plains"/></h1>
 
-<!-- start EXPERIENCES -->
-<div class="container">
-  <ul class="grid effect-2" id="experiences">
-    <li class="thumb col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/1.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Going camping?<br>We&rsquo;ll supply The Breadknife. Lorem ipsum dolor sit amet, consectetur.<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-    <li class="thumb col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/2.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Going camping?<br>We&rsquo;ll supply The Breadknife.<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-    <li class="thumb col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/3.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Going camping?<br>We&rsquo;ll supply The Breadknife.<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-    <li class="thumb col-lg-6 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/4.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Learn to fly<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-    <li class="thumb col-lg-6 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/5.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Going camping?<br>We&rsquo;ll supply The Breadknife.<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-    <li class="thumb col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/6.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Going camping?<br>We&rsquo;ll supply The Breadknife.<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-    <li class="thumb col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/7.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Going camping?<br>We&rsquo;ll supply The Breadknife.<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-    <li class="thumb col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <a href="/">
-        <img class="img-responsive" src="img/thumbs/8.jpg" />
-        <div class="text-box"><div class="background"></div><span class="headline">Going camping?<br>We&rsquo;ll supply The Breadknife. <br>
-        another line<p class="location">Warrumbungles National Park</p></span></div>
-      </a>
-    </li>
-  </ul>
-</div>
-<!-- end EXPERIENCES -->
+        <h2><div class="first">Experience a</div> <div class="second">Great Big Adventure</div></h2>
 
-<!-- start FOOTER -->
-<div id="footer" class="row" style="padding:0; margin:0;">
-  <div class="col-lg-12">
-    Copyright &copy; 2013 &bull; All Rights Reserved
-  </div>
-</div>
-<!-- end FOOTER -->
+        <a href="#" class="scroll"><div id="arrow"></div>scroll down</a>
+      </div>
+    </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+   <div class="container">
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
+      <!-- start EXPERIENCES -->
+      <div class="row">
 
-  <!-- Jquery for parallax -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="js/jquery.superscrollorama.js"></script>
+        <div class="col-xs-12 col-sm-4">
+          <div class="placeholder"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="placeholder"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="placeholder"></div>
+        </div>
 
-  <!-- TweenLite JS -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/plugins/CSSPlugin.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/easing/EasePack.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+        <div class="col-xs-12 col-sm-6">
+          <div class="placeholder"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="placeholder"></div>
+        </div>
 
-  <!-- Blurred BG js -->
-  <script src="js/bg_blur.js"></script>
 
-  <!-- Blurred BG js -->
-  <script src="js/animation.js"></script>
+        <div class="col-xs-12 col-sm-4">
+          <div class="placeholder"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="placeholder"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="placeholder"></div>
+        </div>
 
-</body>
+      </div>
+      <!-- end EXPERIENCES -->
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Greensock JS -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/easing/EasePack.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+
+    <!-- Jquery for parallax -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.superscrollorama.js"></script>
+
+    <!-- slow scroll -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+    <!-- Blurred BG js -->
+    <script src="js/bg_blur.js"></script>
+
+    <!-- Animation -->
+    <script src="js/animation.js"></script>
+
+  </body>
 </html>
